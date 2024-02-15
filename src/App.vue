@@ -1,7 +1,7 @@
 <script setup>
 import Header from "./components/Header.vue";
 import FeatureCard from "./components/FeatureCard.vue";
-import TruckImg from './assets/truck.png'
+import PriceCard from "./components/PriceCard.vue";
 
 defineProps({
   featureImg: String,
@@ -17,12 +17,29 @@ defineProps({
     <input class="form__email" type="text" name="" id="" placeholder="Enter your email address" required>
     <button class="submit-btn" type="submit">Get Started</button>
   </form>
-  <section id="features">
+  <section id="features-container">
     <FeatureCard
         feature-img=""
         feature-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam asperiores aut, consequatur doloremque dolorum ea enim exercitationem inventore iure, minus nam neque nesciunt officia ullam, ut veritatis voluptas voluptates."
-        feature-title="Fast Shipping"></FeatureCard>
+        feature-title="Fast Shipping">
+    </FeatureCard>
+    <FeatureCard
+        feature-img=""
+        feature-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam asperiores aut, consequatur doloremque dolorum ea enim exercitationem inventore iure, minus nam neque nesciunt officia ullam, ut veritatis voluptas voluptates."
+        feature-title="Fast Shipping">
+    </FeatureCard>
+    <FeatureCard
+        feature-img=""
+        feature-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam asperiores aut, consequatur doloremque dolorum ea enim exercitationem inventore iure, minus nam neque nesciunt officia ullam, ut veritatis voluptas voluptates."
+        feature-title="Fast Shipping">
+    </FeatureCard>
   </section>
+  <section id="pricing-container">
+    <PriceCard></PriceCard>
+    <PriceCard></PriceCard>
+    <PriceCard></PriceCard>
+  </section>
+
 
 
 
@@ -53,5 +70,44 @@ defineProps({
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
+}
+#features-container{
+  margin: 0 100px;
+}
+#pricing-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 400px;
+}
+@media (width <= 425px) {
+  #features-container{
+    margin: 0;
+  }
+  .form{
+    margin-bottom: 0;
+  }
+  #pricing-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 50px;
+  }
+}
+@media (425px < width <= 768px) {
+  #pricing-container{
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 120px;
+  }
+}
+@media ( 768px < width < 1024px ) {
+  #pricing-container{
+    margin: 50px 80px;
+  }
+}
+@media ( 1024px <= width <= 1440px ) {
+  #pricing-container{
+    margin: 50px 60px;
+    justify-content: space-around;
+  }
 }
 </style>

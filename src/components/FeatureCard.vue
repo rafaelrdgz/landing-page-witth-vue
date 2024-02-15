@@ -31,4 +31,23 @@ const props = defineProps(['featureImg', 'featureTitle', 'featureDescription'])
 .feature-description{
   font-size: 18px;
 }
+@media (max-width: 425px) {
+  .container{
+    flex-direction: column;
+    margin: 0 50px -20px 50px;
+  }
+  .description-container{
+    margin-top: -50px;
+  }
+}
+@media (min-width: 768px) {
+  .container{
+    margin: 0;
+  }
+}
+@media (min-width: 1920px) {
+  .container{
+    margin: 0 200px -30px 200px;
+  }
+}
 </style>
