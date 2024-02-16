@@ -2,6 +2,7 @@
 import Header from "./components/Header.vue";
 import FeatureCard from "./components/FeatureCard.vue";
 import PriceCard from "./components/PriceCard.vue";
+import Footer from "./components/Footer.vue";
 
 defineProps({
   featureImg: String,
@@ -39,7 +40,7 @@ defineProps({
     <PriceCard></PriceCard>
     <PriceCard></PriceCard>
   </section>
-
+  <Footer></Footer>
 
 
 
@@ -70,6 +71,7 @@ defineProps({
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 #features-container{
   margin: 0 100px;

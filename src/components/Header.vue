@@ -40,4 +40,9 @@
   color: black;
   font-size: 25px;
 }
+@media (320px <= width <= 768px) {
+  .header__logo{
+    width: 300px;
+  }
+}
 </style>

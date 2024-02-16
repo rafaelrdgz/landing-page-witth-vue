@@ -50,6 +50,7 @@
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
+  cursor: pointer;
 }
 .select-btn:hover{
   box-shadow: 5px 0 40px rgba(0,0,0, .2);
